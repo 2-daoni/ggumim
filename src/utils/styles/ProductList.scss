@@ -1,0 +1,43 @@
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.productImg {
+  display: inline-flex;
+  justify-content: center;
+  margin: 0 0 28px 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  border: 0.5px solid #aaafb9;
+  cursor: pointer;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  background-image: url('https://cdn.ggumim.co.kr/storage/20211117191419RW6JS6bjRm.png');
+  width: 24px;
+  height: 28px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 25px;
+  color: white;
+  text-align: center;
+  padding-left: 1px;
+}

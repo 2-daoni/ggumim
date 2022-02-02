@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainImg {
+  width: 800px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.head {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: 900;
+  color: black;
+  padding-bottom: 8px;
+  white-space: pre-wrap;
+  line-height: 40px;
+}
+
+.img-wrapper {
+  width: 800px;
+  box-sizing: border-box;
+  padding: 40px 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0;
+  position: relative;
+}
+
+.productList-wrapper {
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: relative;
+  left: 260px;
+  width: 800px;
+}
+
+.tag {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  .tag-info {
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 28px;
+    left: -20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 220px;
+    height: 86px;
+    padding: 8px 0 8px 8px;
+    margin-top: 16px;
+    border-radius: 7px;
+    -webkit-box-shadow: 3px 3px 8px 0 rgb(0 0 0 / 20%);
+    box-shadow: 3px 3px 8px 0 rgb(0 0 0 / 20%);
+    font-size: 14px;
+    color: #4a4a4a;
+    .tag-info-image {
+      flex-shrink: 0;
+      width: 70px;
+      height: 70px;
+      margin-right: 8px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+    }
+    .tag-info-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding-bottom: 2px;
+      overflow: hidden;
+      text-align: left;
+    }
+    .tag-info-name {
+      width: 100%;
+      overflow: hidden;
+      color: #333c45;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      line-height: 1.3em;
+    }
+    .tag-info-price {
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+    }
+  }
+  .tag-info::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 34px;
+    width: 12px;
+    height: 8px;
+    background-image: url('https://cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1100;
+  }
+
+  .click {
+    display: block;
+  }
+
+  .close {
+    display: none;
+  }
+}
