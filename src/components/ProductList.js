@@ -5,6 +5,11 @@ import 'utils/styles/ProductList.scss';
 
 function ProductList() {
   const [productImg, setProductImg] = useState([]);
+  const [on, setOn] = useState(false);
+
+  const onClick = () => {
+    setOn(!on);
+  };
 
   useEffect(() => {
     getData(process.env.REACT_APP_PRODUCT_KEY).then((res) => {
@@ -15,19 +20,21 @@ function ProductList() {
   console.log(productImg);
 
   return (
-    <div className='product-img-wrapper'>
-      {productImg.map((product, idx) => {
-        return (
-          <div key={product.productName} style={{ backgroundImage: `url(${product.imageUrl})` }} className='productImg'>
-            {product.outside === false ? (
-              <div className='badge' key={product.productId}>
-                {product.discountRate}
-                <span>%</span>
-              </div>
-            ) : null}
-          </div>
-        );
-      })}
+    <div className='productImg-wrapper'>
+      <div className='productImg-container'>
+        {productImg.map((product, idx) => {
+          return (
+            <div key={product.productName} style={{ backgroundImage: `url(${product.imageUrl})` }} className={on ? 'productImg on' : 'productImg off'} onClick={onClick}>
+              {product.outside === false ? (
+                <div className='badge' key={product.productId}>
+                  {product.discountRate}
+                  <span>%</span>
+                </div>
+              ) : null}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -8,8 +8,6 @@ function Btn() {
     setClick(!click);
   };
 
-  console.log(click);
-
   return (
     <div className='Btn-wrapper'>
       <img src='https://cdn.ggumim.co.kr/storage/20211029145238AlZrQ41xtg.png' className={click ? 'Btn click' : 'Btn close'} onClick={onClick}></img>
