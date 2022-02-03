@@ -31,7 +31,6 @@ h2 {
 .img-wrapper {
   width: 800px;
   box-sizing: border-box;
-  padding: 40px 0;
   margin-left: auto;
   margin-right: auto;
   font-size: 0;
@@ -53,6 +52,7 @@ h2 {
   height: 40px;
   position: absolute;
   cursor: pointer;
+
   .tag-info {
     z-index: 1000;
     display: flex;
@@ -89,18 +89,44 @@ h2 {
       overflow: hidden;
       text-align: left;
     }
+
+    .tag-info-priceInfo {
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+      .expected-price {
+        color: #898f94;
+        font-size: 11px;
+        line-height: 11px;
+        font-weight: bold;
+        margin-right: 4px;
+      }
+      .price-discount {
+        color: #ff585d;
+        margin-right: 4px;
+        line-height: 1.2em;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .tag-info-price {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        color: #181d1f;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: bold;
+      }
+    }
+
     .tag-info-name {
       width: 100%;
       overflow: hidden;
       color: #333c45;
-      white-space: nowrap;
       text-overflow: ellipsis;
       line-height: 1.3em;
-    }
-    .tag-info-price {
-      display: flex;
-      align-items: center;
-      margin-top: 4px;
     }
   }
   .tag-info::before {
@@ -115,12 +141,18 @@ h2 {
     background-repeat: no-repeat;
     z-index: 1100;
   }
-
-  .click {
-    display: block;
+  .move-icon-wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin-top: auto;
+    margin-right: 2px;
   }
 
-  .close {
-    display: none;
-  }
+  // .click {
+  //   display: block;
+  // }
+
+  // .close {
+  //   display: none;
+  // }
 }
