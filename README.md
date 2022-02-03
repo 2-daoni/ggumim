@@ -1,6 +1,6 @@
 # 집꾸미기
 
-### 배포링크 :
+### 배포링크 : https://ggumim-2da1.netlify.app/
 
 ---
 
